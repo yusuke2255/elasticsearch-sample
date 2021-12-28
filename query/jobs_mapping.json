@@ -1,0 +1,58 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "my_kuromoji_analyzer": {
+          "type": "custom",
+          "tokenizer": "kuromoji_tokenizer"
+        }
+      }
+    }
+  },
+  "mappings" : {
+    "properties" : {
+      "corporation" : {
+        "properties" : {
+          "industry_numbers" : {
+            "type" : "long"
+          },
+          "name" : {
+            "type" : "text",
+            "analyzer": "my_kuromoji_analyzer",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "number" : {
+            "type" : "long"
+          }
+        }
+      },
+      "job_category_number" : {
+        "type" : "long"
+      },
+      "job_tag_numbers" : {
+        "type" : "long"
+      },
+      "number" : {
+        "type" : "long"
+      },
+      "special_condition_numbers" : {
+        "type" : "long"
+      },
+      "title" : {
+        "type" : "text",
+        "analyzer": "my_kuromoji_analyzer",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      }
+    }
+  }
+}

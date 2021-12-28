@@ -1,0 +1,12 @@
+{
+  "query": {
+    "nested": {
+      "path": "corporation",
+      "query": {
+        "query_string": {
+          "query": "corporation.number:100 AND corporation.name:企業100"
+        }
+      }
+    }
+  }
+}

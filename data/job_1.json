@@ -1,0 +1,12 @@
+{
+  "number": 1,
+  "title": "求人1のタイトル",
+  "job_category_number": 1,
+  "job_tag_numbers": [1, 2, 3, 4, 5],
+  "special_condition_numbers": [10, 11, 12, 13, 14, 15],
+  "corporation": {
+    "number": 100,
+    "name": "企業100",
+    "industry_numbers": [1]
+  }
+}
